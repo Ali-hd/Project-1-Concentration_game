@@ -141,6 +141,7 @@
     let cardId = [];
     let check = 0;
     let done = false;
+    let save1, save2;
 
     // $("#Time").text("Hello");
 
@@ -187,12 +188,15 @@
                 }
                 else{
                     // set timeout for cards to stay open
+                    save1 = cardId;
+                    save2 = child
+                    setTimeout(function(){
                         console.log("not match")//if they dont have the same class name then its not a match
-                        $("." + cardId).hide();
-                        $(child).hide();
+                        $("." + save1).hide();
+                        $(save2).hide();
                         count = 0;
-                    
 
+                    }, 500);
                 }
                 
                 // console.log("count is " +count)
@@ -248,7 +252,3 @@
 
 })();
 
-
-
-
-setTimeout(function(){}, 500);
