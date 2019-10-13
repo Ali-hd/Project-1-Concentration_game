@@ -1,0 +1,90 @@
+header{
+    font-size: 60px;
+    font-family: 'Supermercado One', cursive;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    font-weight: 500;
+    background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22));
+}
+
+footer{
+    text-align: center;
+    
+}
+
+.container{
+    margin: 0;
+}
+
+#card{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 12px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.card_div{
+    display: flex;
+    height: 210px;
+    width: 170px;
+    border-radius: 11px;
+    background: black;
+    align-content: center;
+    
+    
+}
+.card_div:hover{
+    background: crimson;
+    height: 220px;
+    width: 180px;
+}
+
+/* header:hover{
+    background: crimson;
+} */
+img:hover{
+    width: 180px;
+    height: 220px;
+    margin: auto;
+    overflow: hidden;
+    border: black;
+    border-width: 1px;
+}
+img{
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    
+}
+
+body{
+    background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22));}
+
+
+@media only screen and (max-width: 1078px){
+    #card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 12px
+    }
+}
+
+@media only screen and (max-width: 850px){
+    #card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 12px
+    }
+}
+
+ @media only screen and (max-width: 710px){
+    #card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px;
+        /* margin-right: 20%; */
+    }
+}
+
