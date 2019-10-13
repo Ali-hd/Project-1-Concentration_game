@@ -5,12 +5,49 @@ header{
     text-align: center;
     width: 80%;
     font-weight: 500;
-    background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22));
+    background-color: transparent;
+}
+
+.info{
+    display: inline-block;
+    margin-left: 10%;
+    margin-bottom: 18px;
+    font-size: 30px;
+    font-family: 'Acme', sans-serif;
+    float: left;
+}
+
+.info1{
+    display: inline-block;
+    margin-right: 11%;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: 'Acme', sans-serif;
+    float: right;
+    
+}
+
+.info2{
+    clear: both;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 35px;
+}
+
+#marvel{
+    color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+#marvel:hover{
+    color: black;
 }
 
 footer{
     text-align: center;
-    
+    margin-top: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
 }
 
 .container{
@@ -19,10 +56,10 @@ footer{
 
 #card{
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 12px;
     margin: 20px auto;
-    width: 80%;
+    width: 80%; 
 }
 
 .card_div{
@@ -30,13 +67,13 @@ footer{
     height: 210px;
     width: 170px;
     border-radius: 11px;
-    background: black;
+    background-image: url(../images/Avengers_logo.jpg);
+    background-position: center;
     align-content: center;
     
     
 }
 .card_div:hover{
-    background: crimson;
     height: 220px;
     width: 180px;
 }
@@ -45,23 +82,34 @@ footer{
     background: crimson;
 } */
 img:hover{
-    width: 180px;
-    height: 220px;
+    width: 170px;
+    height: 210px;
     margin: auto;
     overflow: hidden;
-    border: black;
-    border-width: 1px;
+    border:4px solid black;
+    border-radius: 11px;
 }
 img{
     width: 160px;
     height: 200px;
-    margin: auto;
-    
+    margin: auto; 
+    border-radius: 11px;
 }
 
 body{
-    background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22));}
+    /* background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22)); */
+    background: radial-gradient(rgba(44, 41, 41, 0.589), red);
+}
 
+
+@media only screen and (max-width: 1361px){
+    #card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 12px
+    }
+}
+    
 
 @media only screen and (max-width: 1078px){
     #card{
@@ -86,5 +134,19 @@ body{
         grid-gap: 12px;
         /* margin-right: 20%; */
     }
+    .info1{
+        margin-right: 20%;
+    }
+
 }
 
+@media only screen and (max-width: 710px){
+
+    .info1{ 
+        margin-right: 15%;
+        font-size: 25px;
+    }
+    .info{
+        font-size: 25px;
+    }
+}

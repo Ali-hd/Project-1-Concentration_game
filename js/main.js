@@ -135,9 +135,14 @@
 
     // let con = document.querySelector(".card")
     let board = document.getElementById("card")
+    let timer = document.getElementById("Time")
+    let score = document.getElementById("Score")
     let count = 0;
     let cardId = [];
     let check = 0;
+    let done = false;
+
+    // $("#Time").text("Hello");
 
     for (let i = 0; i < shuffCards.length; i++) {//creating divs for all the cards and passing the card image
 
@@ -158,7 +163,7 @@
     console.log("count is "+ count)
     // $(".1").hide();
    // setTimeout(function(){
-
+    Time_passed();
         $(".card_div").click(function() {//click on any card
             
             let child = $(this).children()
@@ -177,13 +182,17 @@
                 if(childClass == cardId){ //same cards have same class name
                     alert("you found a match")
                     count = 0;
-                    check+=1;
+                    // check+=1;
+                    update();
                 }
                 else{
+                    // set timeout for cards to stay open
                         console.log("not match")//if they dont have the same class name then its not a match
                         $("." + cardId).hide();
                         $(child).hide();
                         count = 0;
+                    
+
                 }
                 
                 // console.log("count is " +count)
@@ -198,31 +207,48 @@
             // count=1;
             if(check == 14){
                 console.log("You finished the game")
+                done = true
+                Time_passed()
                     }
                 }
+            
          });
-         
+        //  return check
+        function update(){
+            console.log("updating")
+            if(check == 14){
+                console.log("You finished theeeeeeeee game")
+            }else{
+                check+=1
+            }
+        }
+        
+        function Time_passed(){
+            let seconds = 0;
+            if(done == false){
+                Timer_id = setInterval(function(){// 1 sec count up timer
+                    seconds++;
+                    timer.innerHTML = "Timer: " + seconds;
+                    capture();
+                },1000);
+                function capture(){//to save the seconds because clearing timout loses seconds value
+                    MemSec = seconds;
+                }
+            }else if(done==true){ //if true all cards have been flipped
+                clearInterval(Timer_id)
+                timer.innerHTML = "You finised in " + MemSec + " Seconds";
+                score_res = 100000/MemSec;
+                score_final = Math.floor(score_res)
+                score.innerHTML = "Your score is " + score_final
+            }
+            
+        }
        // },1000);
 
-        
-        
-        // if(check == 28){console.log("You found all matches")}
-    // function generate(){
-    //     for (let i = 0; i>= Cards.length; i++) {
-           
-    //         let girdItem = document.createElement("div")
-    //         let imgGridItem = document.createElement("img")
-
-    //         imgGridItem.setAttribute("src", Cards[i].img)
-
-    //         girdItem.classList.add("grid_item")
-
-    //         girdItem.appendChild(imgGridItem)
-
-    //         board.appendChild(girdItem)
-
-    //         console.log("hey")    
-    //     }
-    // }
 
 })();
+
+
+
+
+setTimeout(function(){}, 500);
