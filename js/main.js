@@ -1,6 +1,14 @@
 
 (function () {
-    $("#reset").hide();
+$("#reset").hide();
+ $(".container").hide();
+
+    $("#play").click(function() {
+        $("#instructions").hide();
+        $(".container").show();
+        $("#play").hide();
+        Time_passed();
+    });
     let Cards = [
         {
             id : 1,
@@ -24,7 +32,7 @@
         },
         // {
         //     id : 6,
-        //     img : "../images/gamora.jpg"
+        //     img : "images\gamora.JPG"
         // },
         {
             id : 7,
@@ -40,7 +48,7 @@
         },
         // {
         //     id : 10,
-        //     img : "../images/nick_fury.jpg"
+        //     img : "images\nick_fury.JPG"
         // },
         {
             id : 11,
@@ -80,7 +88,7 @@
         },
         // {
         //     id : 6,
-        //     img : "../images/gamora.jpg"
+        //     img : "images\gamora.JPG"
         // },
         {
             id : 7,
@@ -96,7 +104,7 @@
         },
         // {
         //     id : 10,
-        //     img : "../images/nick_fury.jpg"
+        //     img : "images\nick_fury.JPG"
         // },
         {
             id : 11,
@@ -135,6 +143,7 @@
     let done = false;
     let save1, save2;
     let flips = 0;
+    let stop = 0;
 
     for (let i = 0; i < shuffCards.length; i++) {//creating divs for all the cards and passing the card image
 
@@ -154,9 +163,11 @@
 
     console.log("count is "+ count)
 
-    Time_passed();
         $(".card_div").click(function() {//click on any card
-            
+            stop+=1
+            if(stop == 2){
+                stopp();
+            }
             let child = $(this).children()
             if($(child).is(":visible") == true){//check if the card is already visible or not
 
@@ -186,7 +197,7 @@
                         $("." + save1).hide();
                         $(save2).hide();
                         count = 0;
-
+            
                     }, 300);
                     
                 }
@@ -241,7 +252,6 @@
         $( "#reset" ).click(function() {
             location.reload();
           });
-    
-       // },1000);
+
 })();
 

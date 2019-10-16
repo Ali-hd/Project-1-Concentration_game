@@ -78,9 +78,6 @@ footer{
     width: 180px;
 }
 
-/* header:hover{
-    background: crimson;
-} */
 img:hover{
     width: 170px;
     height: 210px;
@@ -97,7 +94,6 @@ img{
 }
 
 body{
-    /* background: radial-gradient(rgba(255, 0, 0, 0.945),rgb(209, 34, 22)); */
     background: radial-gradient(rgba(44, 41, 41, 0.589), red);
 }
 
@@ -159,4 +155,26 @@ body{
     background-color: rgb(192, 204, 23);
     margin-left: 47%;
     margin-top: 10px;
+}
+
+#play{
+    margin-left: 49%;
+    margin-top: 10%;
+    font-size: 30px;
+    font-family: 'Supermercado One', cursive;
+    background: radial-gradient(hsla(0, 100%, 50%, 0.034), orange);
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#play:hover{
+    background: radial-gradient(hsla(0, 97%, 47%, 0.74), orange);
+}
+
+#instructions{
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10%;
 }
