@@ -4,23 +4,23 @@
     let Cards = [
         {
             id : 1,
-            img : "../images/ant_man.jpg"
+            img : "images/ant_man.JPG"
         },
         {
             id : 2,
-            img : "../images/black_panther.jpg"
+            img : "images/black_panther.JPG"
         },
         {
             id : 3,
-            img : "../images/captain_marvel.jpg"
+            img : "images/captain_marvel.JPG"
         },
         {
             id : 4,
-            img : "../images/doctor_strange.jpg"
+            img : "images/doctor_strange.JPG"
         },
         {
             id : 5,
-            img : "../images/falcon.jpg"
+            img : "images/falcon.JPG"
         },
         // {
         //     id : 6,
@@ -28,15 +28,15 @@
         // },
         {
             id : 7,
-            img : "../images/hawkeye.jpg"
+            img : "images/hawkeye.JPG"
         },
         {
             id : 8,
-            img : "../images/hulk.jpg"
+            img : "images/hulk.JPG"
         },
         {
             id : 9,
-            img : "../images/iron_man.jpg"
+            img : "images/iron_man.JPG"
         },
         // {
         //     id : 10,
@@ -44,39 +44,39 @@
         // },
         {
             id : 11,
-            img : "../images/spider_man.jpg"
+            img : "images/spider_man.JPG"
         },
         {
             id : 12,
-            img : "../images/thor.jpg"
+            img : "images/thor.JPG"
         },
         {
             id : 13,
-            img : "../images/vision.jpg"
+            img : "images/vision.JPG"
         },
         {
             id : 14,
-            img : "../images/captain_america.jpg"
+            img : "images/captain_america.JPG"
         },
         {
             id : 1,
-            img : "../images/ant_man.jpg"
+            img : "images/ant_man.JPG"
         },
         {
             id : 2,
-            img : "../images/black_panther.jpg"
+            img : "images/black_panther.JPG"
         },
         {
             id : 3,
-            img : "../images/captain_marvel.jpg"
+            img : "images/captain_marvel.JPG"
         },
         {
             id : 4,
-            img : "../images/doctor_strange.jpg"
+            img : "images/doctor_strange.JPG"
         },
         {
             id : 5,
-            img : "../images/falcon.jpg"
+            img : "images/falcon.JPG"
         },
         // {
         //     id : 6,
@@ -84,15 +84,15 @@
         // },
         {
             id : 7,
-            img : "../images/hawkeye.jpg"
+            img : "images/hawkeye.JPG"
         },
         {
             id : 8,
-            img : "../images/hulk.jpg"
+            img : "images/hulk.JPG"
         },
         {
             id : 9,
-            img : "../images/iron_man.jpg"
+            img : "images/iron_man.JPG"
         },
         // {
         //     id : 10,
@@ -100,19 +100,19 @@
         // },
         {
             id : 11,
-            img : "../images/spider_man.jpg"
+            img : "images/spider_man.JPG"
         },
         {
             id : 12,
-            img : "../images/thor.jpg"
+            img : "images/thor.JPG"
         },
         {
             id : 13,
-            img : "../images/vision.jpg"
+            img : "images/vision.JPG"
         },
         {
             id : 14,
-            img : "../images/captain_america.jpg"
+            img : "images/captain_america.JPG"
         },
     ]
 
