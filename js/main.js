@@ -1,14 +1,6 @@
-// let marvelMemory = (function(){
-
-
-   
-// })
- 
-// marvelMemory.generate();
-
 
 (function () {
-    
+    $("#reset").hide();
     let Cards = [
         {
             id : 1,
@@ -30,10 +22,10 @@
             id : 5,
             img : "../images/falcon.jpg"
         },
-        {
-            id : 6,
-            img : "../images/gamora.jpg"
-        },
+        // {
+        //     id : 6,
+        //     img : "../images/gamora.jpg"
+        // },
         {
             id : 7,
             img : "../images/hawkeye.jpg"
@@ -46,10 +38,10 @@
             id : 9,
             img : "../images/iron_man.jpg"
         },
-        {
-            id : 10,
-            img : "../images/nick_fury.jpg"
-        },
+        // {
+        //     id : 10,
+        //     img : "../images/nick_fury.jpg"
+        // },
         {
             id : 11,
             img : "../images/spider_man.jpg"
@@ -86,10 +78,10 @@
             id : 5,
             img : "../images/falcon.jpg"
         },
-        {
-            id : 6,
-            img : "../images/gamora.jpg"
-        },
+        // {
+        //     id : 6,
+        //     img : "../images/gamora.jpg"
+        // },
         {
             id : 7,
             img : "../images/hawkeye.jpg"
@@ -102,10 +94,10 @@
             id : 9,
             img : "../images/iron_man.jpg"
         },
-        {
-            id : 10,
-            img : "../images/nick_fury.jpg"
-        },
+        // {
+        //     id : 10,
+        //     img : "../images/nick_fury.jpg"
+        // },
         {
             id : 11,
             img : "../images/spider_man.jpg"
@@ -133,17 +125,16 @@
         }
     }
 
-    // let con = document.querySelector(".card")
     let board = document.getElementById("card")
     let timer = document.getElementById("Time")
     let score = document.getElementById("Score")
+    let flip = document.getElementById("Score2")
     let count = 0;
     let cardId = [];
     let check = 0;
     let done = false;
     let save1, save2;
-
-    // $("#Time").text("Hello");
+    let flips = 0;
 
     for (let i = 0; i < shuffCards.length; i++) {//creating divs for all the cards and passing the card image
 
@@ -162,8 +153,7 @@
     }
 
     console.log("count is "+ count)
-    // $(".1").hide();
-   // setTimeout(function(){
+
     Time_passed();
         $(".card_div").click(function() {//click on any card
             
@@ -179,9 +169,10 @@
             
             console.log("count1 is " +count)
             if(count==2){
+                flips+=1;
                 console.log("count  = 1")
                 if(childClass == cardId){ //same cards have same class name
-                    alert("you found a match")
+                    // alert("you found a match")
                     count = 0;
                     // check+=1;
                     update();
@@ -196,20 +187,19 @@
                         $(save2).hide();
                         count = 0;
 
-                    }, 500);
+                    }, 300);
+                    
                 }
-                
+                flip.innerHTML = "You have flipped "+flips+ " times"
                 // console.log("count is " +count)
             }
 
             if(count == 0){ //count is 0 if 2 cards have been flipped 
                 count = 0
             }else{ count = 1}//count is 1 if only 1 card is flipped
-            // let myClass = $(this).attr("class")
-            // alert(childClass)
             cardId = childClass
             // count=1;
-            if(check == 14){
+            if(check == 12){
                 console.log("You finished the game")
                 done = true
                 Time_passed()
@@ -217,7 +207,7 @@
                 }
             
          });
-        //  return check
+
         function update(){
             console.log("updating")
             if(check == 14){
@@ -243,12 +233,15 @@
                 timer.innerHTML = "You finised in " + MemSec + " Seconds";
                 score_res = 100000/MemSec;
                 score_final = Math.floor(score_res)
-                score.innerHTML = "Your score is " + score_final
+                score.innerHTML = "Your score is " + score_final + " in "+flips+" flips."
+                $("#reset").show();
             }
             
         }
+        $( "#reset" ).click(function() {
+            location.reload();
+          });
+    
        // },1000);
-
-
 })();
 

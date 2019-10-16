@@ -150,3 +150,13 @@ body{
         font-size: 25px;
     }
 }
+
+#reset{
+    font-size: 16px;
+    font-family: fantasy;
+    border-radius: 17px;
+    border-color: black;
+    background-color: rgb(192, 204, 23);
+    margin-left: 47%;
+    margin-top: 10px;
+}
